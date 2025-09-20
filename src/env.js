@@ -10,6 +10,11 @@ export const env = createEnv({
     DATABASE_URL: z.string().url(),
     BETTER_AUTH_SECRET: z.string(),
     BETTER_AUTH_URL: z.string().url(),
+    POLAR_ACCESS_TOKEN: z.string(),
+    POLAR_WEBHOOK_SECRET: z.string(),
+    SMALL_PACK: z.string(),
+    MEDIUM_PACK: z.string(),
+    LARGE_PACK: z.string(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -33,6 +38,11 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
     BETTER_AUTH_URL: process.env.BETTER_AUTH_URL,
+    POLAR_ACCESS_TOKEN: process.env.POLAR_ACCESS_TOKEN,
+    POLAR_WEBHOOK_SECRET: process.env.POLAR_WEBHOOK_SECRET,
+    SMALL_PACK: process.env.NEXT_PUBLIC_SMALL_PACK,
+    MEDIUM_PACK: process.env.NEXT_PUBLIC_MEDIUM_PACK,
+    LARGE_PACK: process.env.NEXT_PUBLIC_LARGE_PACK,    
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
